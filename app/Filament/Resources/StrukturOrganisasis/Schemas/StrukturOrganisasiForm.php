@@ -22,6 +22,8 @@ class StrukturOrganisasiForm
                     ->visibility('public')
                     ->disk('public')
                     ->directory('StrukturFoto')
+                    ->maxSize(1024)
+                    ->directory('StrukturFoto')
                     ->maxSize(1024),
             ]);
     }

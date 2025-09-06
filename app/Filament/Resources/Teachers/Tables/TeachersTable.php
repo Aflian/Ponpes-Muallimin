@@ -2,11 +2,12 @@
 
 namespace App\Filament\Resources\Teachers\Tables;
 
+use Filament\Tables\Table;
+use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
+use Filament\Tables\Columns\ImageColumn;
 
 class TeachersTable
 {
@@ -18,7 +19,19 @@ class TeachersTable
                     ->searchable(),
                 TextColumn::make('mapel')
                     ->searchable(),
-                TextColumn::make('foto')
+                TextColumn::make('gender')
+                    ->searchable(),
+                TextColumn::make('noTlp')
+                    ->searchable(),
+                TextColumn::make('alamat')
+                    ->searchable(),
+                TextColumn::make('pendidikan')
+                    ->searchable(),
+                TextColumn::make('agama')
+                    ->searchable(),
+                ImageColumn::make('foto')
+                    ->imageHeight(100)
+                    ->imageWidth(100)
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
