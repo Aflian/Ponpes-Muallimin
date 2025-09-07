@@ -13,10 +13,12 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class VisiMisiResource extends Resource
 {
     protected static ?string $model = VisiMisi::class;
+    protected static string | UnitEnum | null $navigationGroup = 'Informasi Sekolah';
     protected static ?string $navigationLabel = 'Visi Misi';
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

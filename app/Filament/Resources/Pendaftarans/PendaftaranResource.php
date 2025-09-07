@@ -13,13 +13,14 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class PendaftaranResource extends Resource
 {
     protected static ?string $model = Pendaftaran::class;
-
+    protected static string | UnitEnum | null $navigationGroup = 'PPDB';
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
-
+    protected static ?string $navigationLabel = 'PPDB';
     public static function form(Schema $schema): Schema
     {
         return PendaftaranForm::configure($schema);

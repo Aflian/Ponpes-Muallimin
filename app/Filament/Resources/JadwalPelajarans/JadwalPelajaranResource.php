@@ -19,7 +19,7 @@ class JadwalPelajaranResource extends Resource
     protected static ?string $model = JadwalPelajaran::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
-
+    protected static ?string $navigationLabel = 'Jadwal Pelajaran';
     public static function form(Schema $schema): Schema
     {
         return JadwalPelajaranForm::configure($schema);

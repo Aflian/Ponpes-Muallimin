@@ -13,13 +13,14 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class BeritaResource extends Resource
 {
     protected static ?string $model = Berita::class;
-
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
-
+    protected static string | UnitEnum | null $navigationGroup = 'Post';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::BookOpen;
+    protected static ?string $navigationLabel = 'Berita';
     public static function form(Schema $schema): Schema
     {
         return BeritaForm::configure($schema);
